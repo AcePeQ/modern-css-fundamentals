@@ -1,11 +1,15 @@
 h1, h2 {
-  color: goldenrod;
+  color: hsl(39, 100%, 41%);
+}
+
+h1 span {
+  color: hsl(0, 0, 20%);
 }
 
 a {
-  color: goldenrod;
+  color: hsl(39, 100%, 41%);
 }
 
-.lede {
-  font-size: 21px;
+p {
+  color: hsl(0, 0, 20%);
 }
