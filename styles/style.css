@@ -1,15 +1,23 @@
+body {
+  color: hsl(0, 0%, 20%);
+}
+
 h1, h2 {
   color: hsl(39, 100%, 41%);
 }
 
 h1 span {
-  color: hsl(0, 0, 20%);
+  color: hsl(0, 0%, 20%);
 }
 
 a {
   color: hsl(39, 100%, 41%);
 }
 
-p {
-  color: hsl(0, 0, 20%);
+a:hover, a:focus-visible {
+  color: inherit;
+}
+
+.lede {
+  font-size: 21px;
 }
