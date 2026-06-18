@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Overlock";
+  src: local(Overlock), url(../fonts/Overlock-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Overlock";
+  src: local("Overlock Bold"), url(../fonts/Overlock-Bold.ttf);
+  font-weight: bold;
+}
+
 body {
   color: hsl(0, 0%, 20%);
 
@@ -9,6 +21,9 @@ body {
 h1, h2 {
   color: hsl(39, 100%, 41%);
   line-height: 1.1;
+
+  font-family: Overlock;
+  font-weight: 700;
 }
 
 h1 {
@@ -25,6 +40,9 @@ h3 {
 
 h1 span {
   color: hsl(0, 0%, 20%);
+
+  font-size: 0.75em;
+  font-weight: 400;
 }
 
 a {
