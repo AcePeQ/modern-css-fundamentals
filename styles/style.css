@@ -27,9 +27,13 @@
   --ff-accent: Overlock, serif;
 }
 
-body {
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+}
 
+body {
   color: var(--clr-neutral-800);
 
   font-size: var(--fs-400);
