@@ -1,21 +1,20 @@
 @font-face {
   font-family: "Overlock";
-  src: local(Overlock), url(../fonts/Overlock-Regular.ttf);
-  font-weight: normal;
+  src: local("Overlock"), url("../fonts/Overlock-Regular.ttf");
 }
 
 @font-face {
   font-family: "Overlock";
-  src: local("Overlock Bold"), url(../fonts/Overlock-Bold.ttf);
+  src: local("Overlock Bold"), url("../fonts/Overlock-Bold.ttf");
   font-weight: bold;
 }
 
 :root {
   --clr-accent-300: hsl(39 94% 57%);
-  --clr-accent-400: hsl(39, 100%, 41%);
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-800: hsl(0, 0% 20%);
+  --clr-accent-400: hsl(39 100% 41%);
 
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-800: hsl(0 0% 20%);
 
   --fs-400: 1.125rem;
   --fs-500: 1.3125rem;
@@ -29,29 +28,32 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 body {
   color: var(--clr-neutral-800);
-
   font-size: var(--fs-400);
-  line-height: 1.6;
   font-family: var(--ff-base);
+  line-height: 1.6;
+  margin: 0;
 }
 
 h1,
 h2 {
   color: var(--clr-accent-400);
-  line-height: 1.1;
-
   font-family: var(--ff-accent);
-  font-weight: 700;
+  line-height: 1.1;
 }
 
 h1 {
   font-size: var(--fs-800);
+}
+
+h1 span {
+  display: block;
+  font-size: 0.75em;
+  font-weight: lighter;
+  color: var(--clr-neutral-800);
 }
 
 h2 {
@@ -60,15 +62,6 @@ h2 {
 
 h3 {
   font-size: var(--fs-600);
-}
-
-h1 span {
-  display: block;
-
-  color: var(--clr-neutral-800);
-
-  font-size: 0.75em;
-  font-weight: 400;
 }
 
 a {
@@ -80,25 +73,19 @@ a:focus-visible {
   color: inherit;
 }
 
-button {
+.button {
   font: inherit;
-}
-
-.btn {
-  display: inline-block;
-
-  background-color: var(--clr-accent-300);
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--clr-accent-300);
   border: 0;
-
-  padding: .5em 1.5rem;
-
-  margin-block-start: 50px;
+  padding: 0.75em 1.5em;
 }
 
-.btn:hover,
-.btn:focus-visible {
-  background-color: var(--clr-neutral-800);
-  color: var(--clr-neutral-100);
+.button:hover,
+.button:focus-visible {
+  background: var(--clr-neutral-800);
+  color: var(--clr-accent-300);
 }
 
 .lede {
@@ -106,32 +93,39 @@ button {
 }
 
 .hero {
-  background-color: var(--clr-accent-400);
   padding-block: 100px;
-  padding-inline: 1rem;
-
-  text-align: center;
+  background-color: var(--clr-accent-400);
 }
 
-.hero-layout {
-  background-color: var(--clr-accent-100);
-  padding: 50px;
+.hero-content {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  max-inline-size: 900px;
+  margin-inline: auto;
+}
 
+.hero-content> :first-child {
+  margin-block-start: 0;
+}
+
+.hero-content> :last-child {
+  margin-block-end: 0;
+}
+
+.middle {
   max-inline-size: 900px;
   margin-inline: auto;
 }
 
 .page-footer {
-  background-color: var(--clr-neutral-800);
-  padding: 100;
-  color: var(--clr-accent-100);
   text-align: center;
+  background: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
+  padding: 50px;
 }
 
-.middle,
-.footer-content {
-  padding-inline: 1rem;
-
-  max-inline-size: 900px;
+.page-footer-content {
   margin-inline: auto;
+  max-inline-size: 900px;
 }
