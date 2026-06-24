@@ -82,6 +82,11 @@ a:focus-visible {
   padding: 0.75em 1.5em;
 }
 
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
 .button:hover,
 .button:focus-visible {
   background: var(--clr-neutral-800);
@@ -95,11 +100,14 @@ a:focus-visible {
 .hero {
   padding-block: 100px;
   background-color: var(--clr-accent-400);
+
+  background-image: url(../images/chess-bg.jpg);
+  background-size: cover;
 }
 
 .hero-content {
   text-align: center;
-  background: white;
+  background: hsl(0 0% 100% / 0.7);
   padding: 40px;
   max-inline-size: 900px;
   margin-inline: auto;
@@ -120,7 +128,8 @@ a:focus-visible {
 
 .page-footer {
   text-align: center;
-  background: var(--clr-neutral-800);
+  background-color: var(--clr-neutral-800);
+  background-image: linear-gradient(var(--clr-neutral-800), black);
   color: var(--clr-neutral-100);
   padding: 50px;
 }
