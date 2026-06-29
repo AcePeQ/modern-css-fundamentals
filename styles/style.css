@@ -104,6 +104,15 @@ img {
   padding-inline: 1rem;
 }
 
+.three-columns {
+  display: grid;
+  gap: 21px;
+
+  @media (width > 720px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .hero {
   padding-block: 100px;
   background-color: var(--clr-accent-400);
