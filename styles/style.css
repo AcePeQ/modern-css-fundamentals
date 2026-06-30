@@ -15,6 +15,8 @@
 
   --clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-800: hsl(0 0% 20%);
+  --clr-neutral-900: hsl(0 0% 10%);
+
 
   --fs-400: 1.125rem;
   --fs-500: 1.3125rem;
@@ -97,6 +99,27 @@ img {
   font-size: var(--fs-500);
 }
 
+.page-header {
+  padding-block: 21px;
+  background-color: var(--clr-neutral-900);
+}
+
+.page-header-layout {
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  gap: 21px;
+}
+
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 21px;
+}
 
 .wrapper {
   max-inline-size: 900px;
